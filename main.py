@@ -4,7 +4,9 @@ from bs4 import BeautifulSoup
 import requests
 from datetime import datetime
 import os
-timestamp = str(datetime.now())[0:19] + "Hrs"
+import pytz
+ist = pytz.timezone('Asia/Kolkata')
+timestamp = str(datetime.now(ist))[0:13] + "Hrs"
 
 
 # def pm_levels():
@@ -84,7 +86,7 @@ def get_raw_data(state, city):
 
         # print(f"{city}: {aqi}, {pm2_5}, {pm10}, {temp}, {humidity}, {wind_speed}, {wind_direction}")
         data[city] = [aqi, pm2_5, pm10, temp, humidity, wind_speed, wind_direction]
-        print(data)
+        # print(data)
 
         
         # Checking Wether csv file already exists or not

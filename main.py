@@ -84,6 +84,7 @@ def get_raw_data(state, city):
 
         # print(f"{city}: {aqi}, {pm2_5}, {pm10}, {temp}, {humidity}, {wind_speed}, {wind_direction}")
         data[city] = [aqi, pm2_5, pm10, temp, humidity, wind_speed, wind_direction]
+        print(data)
 
         
         # Checking Wether csv file already exists or not

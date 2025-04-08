@@ -1,3 +1,6 @@
+permissions:
+  contents: write
+
 name: AQI Tracker - Hourly Run
 
 on:
@@ -24,3 +27,16 @@ jobs:
 
       - name: Run main.py
         run: python main.py
+
+      - name: Commit and push CSV updates
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add levels_*.csv
+          git commit -m "Update AQI CSV data" || echo "No changes to commit"
+          git push
+        env:
+          # This gives the workflow permission to push to the repo
+          # GITHUB_TOKEN is automatically provided by GitHub Actions
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

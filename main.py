@@ -50,7 +50,7 @@ data = {}
 def get_raw_data(state, city):
     # URL you want to scrape AQI.in dashboard
     url = f"https://www.aqi.in/weather/india/{state}/{city}"
-    time.sleep(20)
+    #time.sleep(20)
     response = requests.get(url)
 
     # Check if request was successful

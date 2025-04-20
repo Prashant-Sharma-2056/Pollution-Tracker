@@ -38,7 +38,8 @@ location =  {"new-delhi": "delhi",
              "kolkata" : "west-bengal", 
              "hyderabad" : "telangana", 
              "pune": "maharashtra",
-             "ghaziabad": "uttar-pradesh"}
+             "ghaziabad": "uttar-pradesh",
+             "hisar": "haryana"}
 
 index = ["aqi", "pm2_5", "pm10", "temp", "humidity", "wind_speed", "wind_direction"]
 

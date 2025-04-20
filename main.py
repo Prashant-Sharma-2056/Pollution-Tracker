@@ -39,7 +39,8 @@ location =  {"new-delhi": "delhi",
              "hyderabad" : "telangana", 
              "pune": "maharashtra",
              "ghaziabad": "uttar-pradesh",
-             "hisar": "haryana"}
+             "hisar": "haryana",
+             "sirsa": "haryana"}
 
 index = ["aqi", "pm2_5", "pm10", "temp", "humidity", "wind_speed", "wind_direction"]
 
